@@ -1,0 +1,225 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+
+.love-ya-like-a-sister-regular {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/* Fondo del header */
+.header {
+    height: 350px;
+    background-image: url(img/header.webp);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 48px;
+    font-family: "Love Ya Like A Sister", cursive;
+}
+
+/* Fondo del body */
+body {
+    background-image: url('your-body-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(128, 85, 50));
+    position:relative;
+    top: -50px;
+    height: 50px;
+    overflow: hidden
+    
+}
+
+.navbar a{
+    max-height: 50%;
+    background-color: #0000006b;
+    border-radius: 20%;
+    margin: 20px;
+    border-style: groove;
+    border-color: aqua;
+}
+
+.navbar a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #A1887F;
+}
+
+/* Icono de menú hamburguesa (solo visible en dispositivos móviles) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.navbar.mobile-nav {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.navbar.mobile-nav a {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* Slider Section */
+.slider-section {
+    background-color: #4E342E;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.image-container{
+    border-radius: 20%;
+    max-height: fit-content;
+}
+.image-container img{
+    
+    border-radius: 20%;
+    height: 20vh;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Colores específicos de las secciones */
+#slider-muebles .slide {
+    background-color: #8D6E63;
+}
+
+#slider-cultivo .slide {
+    background-color: #A1887F;
+}
+
+#slider-cocina .slide {
+    background-color: #D7CCC8;
+}
+
+/* ================== RESPONSIVE ================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .header-overlay {
+        font-size: 32px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    .slider {
+        width: 90%;
+    }
+
+    .prev, .next {
+        font-size: 20px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .header {
+        height: 200px;
+    }
+
+    .header-overlay {
+        font-size: 24px;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .navbar a {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Cuando se activa el menú en mobile */
+    .navbar.active a {
+        display: block;
+    }
+
+    .slider {
+        width: 95%;
+    }
+
+    .prev, .next {
+        font-size: 18px;
+    }
+
+    .slider-section {
+        padding: 20px 0;
+    }
+}
