@@ -200,7 +200,7 @@ body {
     }
 
     .slider {
-        width: 90%;
+        width: 100%;
     }
 
     .prev, .next {
@@ -236,7 +236,13 @@ body {
     }
 
     .slider {
-        width: 95%;
+        width: 100%;
+        
+    }
+
+    .slide{
+        max-height: 50vh; 
+        max-width: 50vh;
     }
 
     .prev, .next {
@@ -244,6 +250,7 @@ body {
     }
 
     .slider-section {
-        padding: 20px 0;
+        padding: 0px 0;
+
     }
 }
