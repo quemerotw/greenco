@@ -25,7 +25,7 @@ sliders.forEach(slider => {
   let currentIndex = 0;
 
   function showSlide(index) {
-    container.style.transform = `translateX(${-index * 100}%)`;
+    container.style.transform = `translateX(${-index * 20}%)`;
   }
 
   prevBtn.addEventListener('click', () => {

@@ -25,11 +25,16 @@ body, html {
     background: rgba(0, 0, 0, 0.5);
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 48px;
     font-family: "Love Ya Like A Sister", cursive;
+}
+
+.header-overlay h1{
+    margin: 0;
 }
 
 /* Fondo del body */
@@ -43,7 +48,7 @@ body {
 .navbar {
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(128, 85, 50));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(54, 22, 0));
     position:relative;
     top: -50px;
     height: 50px;
@@ -54,10 +59,9 @@ body {
 .navbar a{
     max-height: 50%;
     background-color: #0000006b;
-    border-radius: 20%;
+    border-radius: 10%;
     margin: 20px;
-    border-style: groove;
-    border-color: aqua;
+    padding: 15px,15px,15px,15px;
 }
 
 .navbar a {
@@ -94,26 +98,41 @@ body {
 }
 
 /* Slider Section */
-.slider-section {
-    background-color: #4E342E;
+.slider-section  {
     color: white;
-    padding: 40px 0;
     text-align: center;
+    height: fit-content;
+    justify-content: center;
+}
+
+#slider-muebles{
+    background-image: linear-gradient(to bottom, rgb(54, 22, 0) 95%, rgb(128, 85, 50));
+}
+
+#slider-cultivo{
+
+    background-image: linear-gradient(to bottom, rgb(128, 85, 50) 95%, rgb(40, 65, 0));
+}
+
+#slider-cocina{
+    background-image: linear-gradient(to bottom, rgb(40, 65, 0) 95%, rgb(0, 0, 0));
 }
 
 .image-container{
-    border-radius: 20%;
-    max-height: fit-content;
+    display: block;
+    overflow: hidden;
+    justify-content: center;
 }
 .image-container img{
-    
     border-radius: 20%;
-    height: 20vh;
+    max-width: 30vh;
 }
+
+
 
 .slider {
     position: relative;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -121,12 +140,17 @@ body {
 .slider-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    justify-content: center;
+    padding-bottom: 10vh;
 }
 
 .slide {
-    min-width: 100%;
+    border-radius: 20%;
+    max-width: 20%;
     padding: 20px;
     text-align: center;
+    box-shadow: 5px 5px 5px 5px black;
+    margin: 20px;
 }
 
 .prev, .next {
@@ -155,11 +179,11 @@ body {
 }
 
 #slider-cultivo .slide {
-    background-color: #A1887F;
+    background-color: #1e2716;
 }
 
 #slider-cocina .slide {
-    background-color: #D7CCC8;
+    background-color: #1b1b1b;
 }
 
 /* ================== RESPONSIVE ================== */
