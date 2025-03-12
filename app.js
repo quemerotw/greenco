@@ -21,11 +21,13 @@ sliders.forEach(slider => {
   const slides = slider.querySelectorAll('.slide');
   const prevBtn = slider.querySelector('.prev');
   const nextBtn = slider.querySelector('.next');
+  const size = slides[0].clientWidth;
   
+
   let currentIndex = 0;
 
   function showSlide(index) {
-    container.style.transform = `translateX(${-index * 20}%)`;
+    container.style.transform = `translateX(${-index * size}px)`;
   }
 
   prevBtn.addEventListener('click', () => {
